@@ -186,7 +186,6 @@ section p, section h2 {
   height: 100%;
   padding: 70px 24px 36px 24px;
   box-sizing: border-box;
-  overflow: scroll;
 }
 
 #projects > .description {
