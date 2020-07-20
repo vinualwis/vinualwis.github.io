@@ -94,6 +94,8 @@ main {
 
 #layer1 {
   background: url('./assets/parallaxLayer1.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 #layer2 {
