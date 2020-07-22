@@ -194,7 +194,6 @@ const generateProjects = () => {
     }
   )
 }
-
 window.onload = () => {
 	setTimeout(
 		() => {
@@ -205,9 +204,8 @@ window.onload = () => {
 		,300
 	);
 	generateProficiencies();
-	generateProjects();
+  generateProjects();
 };
-
 /**
  * Adds CSS animation classes to elements in the Skills section of website
  * @return {void} 
