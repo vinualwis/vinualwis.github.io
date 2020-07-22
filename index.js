@@ -206,6 +206,17 @@ window.onload = () => {
 	generateProficiencies();
   generateProjects();
 };
+
+const homeAnimation = () => {
+  const homeTitle = document.querySelector('h1');
+  homeTitle.classList.remove('invisible');
+  homeTitle.classList.add('slideup');
+  setTimeout(() => {
+    const homeDescription = document.querySelector('#home > p');
+    homeDescription.classList.remove('invisible');
+    homeDescription.classList.add('slideup');
+  },200);
+}
 /**
  * Adds CSS animation classes to elements in the Skills section of website
  * @return {void} 
@@ -284,6 +295,14 @@ const handleProjectIntersection = (entries) => {
 	});
 };
 
+const handleHomeIntersection = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.intersectionRatio >= 0.25) {
+			homeAnimation();
+		}
+	});
+};
+
 const projectsObserver = new IntersectionObserver(handleProjectIntersection,options);
 const projectSection = document.querySelector('#projects');
 projectsObserver.observe(projectSection);
@@ -291,6 +310,10 @@ projectsObserver.observe(projectSection);
 let intersectionObserver = new IntersectionObserver(handleIntersection,options);
 const skillsSection = document.querySelector('#languages');
 intersectionObserver.observe(skillsSection);
+
+const homeObserver = new IntersectionObserver(handleHomeIntersection,options);
+const homeSection = document.querySelector('#home');
+homeObserver.observe(homeSection);
 
 window.onscroll = event => {
 	const parallax = () => {
