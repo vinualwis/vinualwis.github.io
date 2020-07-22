@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Vinu Alwis</title>
+    <meta name="author" content="Vinu Alwis">
+    <meta name="description" content="Vinu Alwis Web Portfolio">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer type="module" src="index.js"></script>
+  </head>
+  <body> 
+    <header class="invisible">
+      <div class="header-container"> 
+        <div class="logo-container"> 
+          <img class="app-logo" alt="logo" src="./assets/AlwisLogo.png"/>
+          <h3 class="logo-text">VINU ALWIS</h3>
+        </div>
+        <nav class="app-nav"> 
+          <ul class="app-nav-list">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#languages">Skills</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="parallax-container" id="home">
+        <div class="parallax-layer" id="layer1" data-speed="5"></div>
+        <div class="parallax-layer" id="layer2" data-speed="11"></div>
+        <div class="parallax-layer" id="layer3" data-speed="16"></div>
+        <div class="parallax-layer" id="layer4" data-speed="26"></div>
+        <div class="parallax-layer" id="layer5" data-speed="36"></div>
+        <div class="parallax-layer" id="layer6" data-speed="49"></div>
+        <div class="parallax-layer" id="layer7" data-speed="69"></div>
+        <div class="parallax-layer" id="layer8" data-speed="100"></div>
+      </section>
+      <section class="content-section" id="languages">
+          <div class="description">
+            <h2 class="invisible"> My Skills</h2>
+            <p class="invisible">
+                My diverse portfolio of work across various sectors of industry, ranging from e-Learning to IoT, has provided me with a vast skillset and experience. 
+                In particular, my proclivity to proactively familiarise myself with all layers of the stack on projects that I am a part of has enabled me to become fluent in various coding languages and frameworks as well as gain invaluable hands-on experience with cloud services. 
+                Yet with every datum of new information that I learn, I continue to remain keenly acquainted with the fundamental principles of Software Engineering that transcend programming languages and frameworks alike, particularly the principles of authoring clean parsimonious code.
+            </p>
+          </div>
+          <section class="proficiencies invisible">
+            <template id="proficiency">
+                <article class="proficiency">
+                    <h3></h3>
+                    <div class="star-rating">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </article>
+            </template>
+          </section>
+      </section>
+      <section class="content-section" id='projects'>
+        <div class="description">
+            <h2 class="invisible"> My Key Projects</h2>
+        </div>
+        <div class="projects-collection">
+            <template id="project">
+                <article class="project invisible">
+                    <div class="project-content">
+                        <h3 class="project-title"></h3>
+                        <p class="project-description"></p>
+                    </div>
+                    <div class="tech-stack">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </div>
+                </article>
+            </template>
+            <article class="project invisible" id="moreworks">
+                <h3>More in the works...</h3>
+            </article>
+        </div>
+      </section>
+      <section class="content-section" id="contact"> 
+        <a href="https://www.vecteezy.com/free-vector/exact">Exact Vectors by Vecteezy</a>
+      </section>
+    </main>
+  </body>
+</html>
