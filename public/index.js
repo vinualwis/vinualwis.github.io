@@ -125,7 +125,7 @@ const projects = [
     description: `I was the augmented-reality experience designer and developer for this project conducted
     for Monash University Sir Louis Matheson Library. The project used cutting-edge technology to 
     showcase geographic landmarks of significance as well as explain their rich history.`,
-    stack: ['ZappAR']
+    stack: ['ZappAR Studio']
   },
   {
     id: 'connectionmanager',
