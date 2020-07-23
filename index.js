@@ -215,6 +215,11 @@ const homeAnimation = () => {
     const homeDescription = document.querySelector('#home > p');
     homeDescription.classList.remove('invisible');
     homeDescription.classList.add('slideup');
+    setTimeout(() => {
+      const homeButton = document.querySelector('#home > button');
+      homeButton.classList.remove('invisible');
+      homeButton.classList.add('slideup');
+    },200);
   },200);
 }
 /**
