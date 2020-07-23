@@ -186,7 +186,7 @@ section p, section h2 {
   color: deepskyblue;
 }
 
-.description {
+#languages > .description {
   flex: 500px 1;
   margin-right: 24px;
   margin-left: 16px;
@@ -199,16 +199,24 @@ section p, section h2 {
   height: 100%;
   padding: 70px 24px 36px 24px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #projects > .description {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+}
+
+.projects-collection-container {
+  height: 100%;
 }
 
 .projects-collection {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 24px;
+  height: 100%;
 }
 
 .project {
