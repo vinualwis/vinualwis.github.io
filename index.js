@@ -308,7 +308,6 @@ const handleProjectIntersection = (entries) => {
 
 const handleHomeIntersection = (entries) => {
 	entries.forEach((entry) => {
-    console.log('😁');
     console.log(entry.intersectionRatio);
 		if (entry.intersectionRatio >= 0.25) {
 			homeAnimation();
