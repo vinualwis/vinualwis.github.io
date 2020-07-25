@@ -229,7 +229,6 @@ const homeAnimation = () => {
  * @return {void} 
  */
 const skillsAnimation = () => {
-  console.log('👻');
 	const descriptionTitle = document.querySelector('.description > h2');
 	descriptionTitle.classList.add('slideup');
 	descriptionTitle.classList.remove('invisible');
@@ -287,11 +286,8 @@ const options = {
 	threshold: [0,0.25,0.5,0.75,1]
 };
 
-
-
 const handleIntersection = (entries) => {
 	entries.forEach((entry) => {
-    console.log(entry.intersectionRatio);
 		if (entry.intersectionRatio >= 0.25) {
 			skillsAnimation();
 		}
