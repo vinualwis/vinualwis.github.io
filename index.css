@@ -54,17 +54,6 @@ header {
 
 .app-nav-list {
   display: none;
-  list-style: none;
-}
-
-.app-nav-list li {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.app-nav-list li a {
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .app-logo {
@@ -80,8 +69,6 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 section {
@@ -143,6 +130,7 @@ h3 {
   padding-left: 8px;
   padding-right: 8px;
   align-items: center;
+  height: 100vh;
 }
 
 #home > h1 {
@@ -331,6 +319,7 @@ span.checked {
   }
 }
 
+/* Small screen landscape orientation specific styling */
 @media (orientation: landscape) and (max-width: 1000px) {
   #home {
     padding-top: 0;
@@ -342,59 +331,8 @@ span.checked {
   }
 }
 
+/* Large screen styling */
 @media (min-width: 1200px ){
-
-  .proficiencies {
-    grid-template-columns: repeat(3,1fr);
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  header {
-    position: absolute;
-    z-index: 100;
-    height: 54px;
-    width: 100%;
-  }
-  
-  .sticky {
-    position: fixed;
-    top:0;
-  }
-  
-  .header-container {
-    display: flex;
-    margin: 12px 16px 12px 16px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .slidein {
-    animation: slidein 0.5s ease-in-out;
-  }
-  
-  .invisible {
-    opacity: 0;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-text {
-    text-transform: capitalize;
-    font-size: large;
-    font-weight: bolder;
-  }
   
   .app-nav-list {
     display: flex;
@@ -411,11 +349,6 @@ span.checked {
     text-transform: uppercase;
   }
   
-  .app-logo {
-    height: 55px;
-    width: 45px;
-  }
-  
   main {
     position: absolute;
     top: 0;
@@ -423,44 +356,20 @@ span.checked {
     height: 100%;
   }
   
-  #home > button {
-    min-width: fit-content;
-    max-width: 100px;
-    background-color: rgba(0,0,0,0);
-    border: 2px solid white;
-    border-radius: 4px;
-    padding: 8px;
-    margin-top: 8px;
-  }
-
-  .logo-text, .app-nav-list li a , #home > button {
-    color: white;
-    font-family: 'Share Tech Mono', monospace;
-  }
-  
   h1 > i {
     color: white;
   }
   
-  .content-section {
-    height: 100%;
-    width: 100vw;
-  }
-  
+  /* Lg || Home Section */
   #home {
     position: absolute;
     top: 0;
-    display: flex;
-    flex-direction: column;
-    padding-top: 96px;
     padding-left: 86px;
     box-sizing: border-box;
     align-items: flex-start;
   }
   
   #home > h1 {
-    color: white;
-    font-family: 'Share Tech Mono', monospace;
     font-size: 86px;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -472,43 +381,22 @@ span.checked {
     font-size: large;
   }
   
+  /* Lg || Skills Section */
   #languages {
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     padding: 80px 16px 36px 16px;
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 100%;
-    height: 100%;
-  }
-  
-  section p, section h2 {
-    color: white;
-    font-family: 'Share Tech Mono', monospace;
-    line-height: 1.6;
   }
 
-  section p {
-    font-size: 1rem;
-  }
-
-  section h2 {
-    font-size: 1.25rem;
+  .proficiencies {
+    grid-template-columns: repeat(3,1fr);
   }
   
   .proficiency {
     height: 100px;
-    border-radius: 4px;
-    background-color: rgba(255,255,255,5%);
     margin: 8px 8px 8px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-family: 'Share Tech Mono', monospace;
-    box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
   }
   
   #languages > .description {
@@ -517,124 +405,26 @@ span.checked {
     margin-left: 16px;
   }
   
+  /* Lg || Projects Section */
   #projects {
     position: absolute;
     top: 200%;
-    width: 100%;
-    height: 100%;
     padding: 70px 24px 36px 24px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  #projects > .description {
-    margin-bottom: 24px;
-  }
-  
-  .projects-collection-container {
-    height: 100%;
   }
   
   .projects-collection {
-    display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 24px;
-    height: 100%;
-  }
-  
-  .project {
-    height: auto;
-    border-radius: 4px;
-    background-color: rgba(255,255,255,5%);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
-  }
-  
-  .project-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .project-content > h3 {
-    color: white;
-    font-family: 'Share Tech Mono', monospace; 
-    margin-bottom: 0;
-    margin-top: 8px;
-  }
-  
-  .project-content > p {
-    font-size: 15px;
-    margin: 0;
   }
   
   .project-content > h3, .project-content > p {
     padding: 8px;
   }
-  
-  .tech-stack {
-    display: flex;
-    min-width: fit-content;
-    width: 100%;
-    min-height: 25px;
-    padding-left: 16px;
-    box-sizing: border-box;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .tech-stack i {
-    color: white;
-  }
-  
-  .award {
-    width: 100%;
-    min-height: 25px;
-    background: #118bdc;
-    color: white;
-    font-family: 'Share Tech Mono', monospace; 
-    display: flex;
-    align-items: center;
-    padding-left: 16px;
-    box-sizing: border-box;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
-  
+
   .award > span {
-    margin-left: 8px;
+    font-size: medium;
   }
-  
+
   .tech-stack > span {
-    padding-left: 12px;
-    color: white;
-    margin-right: 8px;
-    font-family: 'Share Tech Mono', monospace; 
-  }
-  
-  .slideup {
-    animation: slideup 0.6s ease-in-out;
-  }
-  
-  #moreworks {
-    color: white;
-    font-family: 'Share Tech Mono', monospace; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #118bdc;
-  }
-  
-  #contact {
-    position: absolute;
-    top: 300%;
-    width: 100%;
-    height: 100%;
+    font-size: small;
   }
 }
