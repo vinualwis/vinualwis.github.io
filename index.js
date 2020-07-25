@@ -149,7 +149,8 @@ const generateAward = (award) => {
   const trophyIcon = document.createElement('i');
   trophyIcon.classList.add('fa','fa-trophy');
   const awardDescription = document.createElement('span');
-  awardDescription.textContent = award
+  awardDescription.textContent = award;
+  awardDescription.classList.add('primary');
   awardContainer.append(trophyIcon,awardDescription);
   return awardContainer;
 }
@@ -187,6 +188,7 @@ const generateProjects = () => {
       stack.forEach((tech) => {
         const spanElement = document.createElement('span');
         spanElement.textContent = tech;
+        spanElement.classList.add('primary');
         projectStack.appendChild(spanElement);
       });
       const moreInWorksElement = document.querySelector('#moreworks');
@@ -302,6 +304,7 @@ const handleProjectIntersection = (entries) => {
 
 const handleHomeIntersection = (entries) => {
 	entries.forEach((entry) => {
+    console.log(entry.intersectionRatio);
 		if (entry.intersectionRatio >= 0.25) {
 			homeAnimation();
 		}
