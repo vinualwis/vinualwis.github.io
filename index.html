@@ -5,7 +5,7 @@
     <meta name="author" content="Vinu Alwis">
     <meta name="description" content="Vinu Alwis Web Portfolio">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +38,7 @@
     </header>
     <main>
       <section class="content-section" id="home">
-       <h1 class="invisible primary">
+       <h1 class="invisible primary" id="appTitle">
         <i class="fa fa-code" aria-hidden="true"></i>
          Remote Software Engineer
        </h1>
@@ -46,7 +46,7 @@
        <button class="invisible" onclick='window.location="#languages"'>Learn More</button>
       </section>
       <section class="content-section" id="languages">
-          <div class="description">
+          <div class="description" id="languageDescription">
             <h2 class="invisible primary"> My Skills</h2>
             <p class="invisible">
                 My diverse portfolio of work across various sectors of industry, ranging from e-Learning to IoT, has provided me with a vast skillset and experience. 
@@ -70,7 +70,7 @@
           </section>
       </section>
       <section class="content-section" id='projects'>
-        <div class="description">
+        <div class="description" id="projectDescription">
             <h2 class="invisible primary"> My Key Projects</h2>
         </div>
         <div class="projects-collection-container"> 
@@ -86,7 +86,7 @@
                     </div>
                 </article>
             </template>
-            <article class="project invisible" id="moreworks">
+            <article class="project" id="moreworks">
                 <h3 class="primary">More in the works...</h3>
             </article>
           </div>

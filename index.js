@@ -195,18 +195,6 @@ const generateProjects = () => {
       projectCollectionElement.insertBefore(projectClone,moreInWorksElement);
     }
   )
-}
-window.onload = () => {
-	setTimeout(
-		() => {
-			const headerElement = document.querySelector('header');
-			headerElement.classList.remove('invisible');
-			headerElement.classList.add('slidein');
-		}
-		,300
-	);
-	generateProficiencies();
-  generateProjects();
 };
 
 const homeAnimation = () => {
@@ -280,48 +268,56 @@ const projectsAnimation = () => {
 	},300);
 };
 
-const options = {
+const soptions = {
 	root: null,
 	rootMargin: '0px',
-	threshold: [0,0.25,0.5,0.75,1]
+	threshold: 0
 };
 
 const handleIntersection = (entries) => {
 	entries.forEach((entry) => {
 		if (entry.intersectionRatio >= 0.25) {
-			skillsAnimation();
+      if(entry.target.id === "languageDescription"){
+        skillsAnimation();
+      }
+      if(entry.target.id === "appTitle"){
+        homeAnimation();
+      }
+      if(entry.target.id === "projectDescription"){
+        projectsAnimation();
+      }
 		}
 	});
 };
 
-const handleProjectIntersection = (entries) => {
-	entries.forEach((entry) => {
-		if (entry.intersectionRatio >= 0.25) {
-			projectsAnimation();
+const createObserver = () => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: [0,0.25,0.5,0.75,1]
+  };
+  const projectSection = document.querySelector('#projectDescription');
+  const skillsSection = document.querySelector('#languageDescription');
+  const homeSection = document.querySelector('#appTitle');
+  let intersectionObserver = new IntersectionObserver(handleIntersection,options);
+  intersectionObserver.observe(skillsSection);
+  intersectionObserver.observe(projectSection);
+  intersectionObserver.observe(homeSection);
+}
+
+window.onload = () => {
+	setTimeout(
+		() => {
+			const headerElement = document.querySelector('header');
+			headerElement.classList.remove('invisible');
+			headerElement.classList.add('slidein');
 		}
-	});
+		,300
+	);
+	generateProficiencies();
+  generateProjects();
+  createObserver();
 };
-
-const handleHomeIntersection = (entries) => {
-	entries.forEach((entry) => {
-    console.log(entry.intersectionRatio);
-		if (entry.intersectionRatio >= 0.25) {
-			homeAnimation();
-		}
-	});
-};
-
-const projectsObserver = new IntersectionObserver(handleProjectIntersection,options);
-const projectSection = document.querySelector('#projects');
-projectsObserver.observe(projectSection);
-
-let intersectionObserver = new IntersectionObserver(handleIntersection,options);
-const skillsSection = document.querySelector('#languages');
-intersectionObserver.observe(skillsSection);
-
-const homeObserver = new IntersectionObserver(handleHomeIntersection,options);
-const homeSection = document.querySelector('#home');
-homeObserver.observe(homeSection);
 
 window.onscroll = event => {
 	const parallax = () => {
