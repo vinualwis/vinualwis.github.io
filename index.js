@@ -134,7 +134,7 @@ const projects = [
     management for Telstra IoT machine-to-machine customers. In my role, I worked closely across layers to 
     deliver features that required the efficient transit of large amounts of data across the stack.
     A challenge that is ubquitious in the IoT sector.`,
-    stack: ['ReactJs','ExpressJs + Typescript','AWS']
+    stack: ['ReactJs','ExpressJs','Typescript','AWS']
   },
 ];
 
