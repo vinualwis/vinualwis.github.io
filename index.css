@@ -163,11 +163,9 @@ h3 {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-  gap: 16px;
 }
 
 .proficiency {
-  height: 80px;
   border-radius: 4px;
   background-color: rgba(255,255,255,5%);
   margin-top: 12px;
@@ -366,6 +364,10 @@ span.checked {
   h1 > i {
     color: white;
   }
+
+  .content-section {
+    height: 1000px;
+  }
   
   /* Lg || Home Section */
   #home {
@@ -374,6 +376,7 @@ span.checked {
     padding-left: 86px;
     box-sizing: border-box;
     align-items: flex-start;
+    height: 1200px;
   }
   
   #home > h1 {
@@ -394,7 +397,7 @@ span.checked {
     flex-direction: row;
     padding: 80px 16px 36px 16px;
     position: absolute;
-    top: 100%;
+    top: 1200px;
   }
 
   .proficiencies {
@@ -415,7 +418,7 @@ span.checked {
   /* Lg || Projects Section */
   #projects {
     position: absolute;
-    top: 200%;
+    top: 2200px;
     padding: 70px 24px 36px 24px;
   }
   
