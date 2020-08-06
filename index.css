@@ -27,7 +27,7 @@ main, header {
 header {
   position: absolute;
   z-index: 1;
-  height: 54px;
+  height: 60px;
   width: 100%;
 }
 
@@ -38,9 +38,11 @@ header {
 
 .header-container {
   display: flex;
-  margin: 12px 16px 12px 16px;
+  padding: 36px 16px 16px 16px;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .slidein {
@@ -217,7 +219,8 @@ h3 {
   background: linear-gradient(180deg, rgba(49,140,231,1) 0%, rgba(0,34,68,1) 100%);
 }
 
-#home > button {
+#home > a {
+  display: block;
   min-width: 150px;
   font-size: large;
   background-color: rgba(0,0,0,0);
@@ -227,7 +230,8 @@ h3 {
   padding: 8px;
   font-family: var(--main-font-family);
   margin-top: 8px;
-  display: block;
+  text-decoration: none;
+  text-align: center;
 }
 
 #home {
@@ -249,6 +253,10 @@ h3 {
 #home > p {
   width: fit-content;
   text-align: center;
+}
+
+#home > .project-overview {
+  display: none;
 }
 
 /* || Skills Section */
@@ -480,7 +488,46 @@ span.checked {
 
 /* Large screen styling */
 @media (min-width: 1200px ){
-  
+  #home > .project-overview {
+    display: flex;
+    height: 250px;
+    width: 50%;
+    padding-bottom: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+
+  .overview-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .overview {
+    height: 100%;
+    width: 300px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    background-color: rgba(255,255,255,10%);
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .overview:hover {
+    transform: scale(1.05,1.05);
+  }
+
+  .overview > span {
+    color: rgba(255,255,255,80%);
+  }
   
   main {
     position: absolute;
@@ -500,7 +547,7 @@ span.checked {
     padding-left: 86px;
     box-sizing: border-box;
     align-items: flex-start;
-    height: 1200px;
+    height: 100vh;
   }
   
   #home > h1 {

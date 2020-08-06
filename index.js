@@ -206,9 +206,29 @@ const homeAnimation = () => {
     homeDescription.classList.remove('invisible');
     homeDescription.classList.add('slideup');
     setTimeout(() => {
-      const homeButton = document.querySelector('#home > button');
+      const homeButton = document.querySelector('#home > a');
       homeButton.classList.remove('invisible');
       homeButton.classList.add('slideup');
+      setTimeout(() => {
+        const overviewTitle = document.querySelector('#home > .project-overview > h2');
+        overviewTitle.classList.remove('invisible');
+        overviewTitle.classList.add('slideup');
+        setTimeout(() => {
+          const acOverview = document.querySelector('#acOverview');
+          acOverview.classList.remove('invisible');
+          acOverview.classList.add('slideup');
+          setTimeout(() => {
+            const hmOverview = document.querySelector('#hmOverview');
+            hmOverview.classList.remove('invisible');
+            hmOverview.classList.add('slideup');
+            setTimeout(() => {
+              const usOverview = document.querySelector('#usOverview');
+              usOverview.classList.remove('invisible');
+              usOverview.classList.add('slideup');
+            },200);
+          },200);
+        },200);
+      },200);
     },200);
   },200);
 }
