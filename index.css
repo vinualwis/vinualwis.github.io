@@ -146,12 +146,15 @@ header {
 
 .app-nav-list > li {
   list-style: none;
-  margin-bottom: 24px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .app-nav-list li a {
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
 }
 
 .app-logo {
