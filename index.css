@@ -121,6 +121,7 @@ header {
   margin-top: 0;
   width: 268px;
   padding-top: 75px;
+  padding-left: 0;
   box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
   box-sizing: border-box;
   transform: translateX(268px);
@@ -134,8 +135,6 @@ header {
 .app-nav-list > li {
   list-style: none;
   box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 16px;
 }
 
 .app-nav-list li a {
@@ -143,6 +142,9 @@ header {
   text-transform: uppercase;
   display: block;
   transition: text-shadow 0.1s ease-in-out;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
 }
 
 .app-nav-list > li > a:active {
