@@ -259,6 +259,10 @@ h3 {
   display: none;
 }
 
+.social-media {
+  display: none;
+}
+
 /* || Skills Section */
 #languages {
   flex-direction: column;
@@ -488,45 +492,80 @@ span.checked {
 
 /* Large screen styling */
 @media (min-width: 1200px ){
-  #home > .project-overview {
-    display: flex;
-    height: 250px;
-    width: 50%;
-    padding-bottom: 16px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    box-sizing: border-box;
-    flex-direction: column;
-  }
 
-  .overview-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  @media(min-height: 800px){
+    #home > .project-overview {
+      display: flex;
+      height: 250px;
+      min-width: 50%;
+      padding-bottom: 16px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+  
+    .overview-container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .overview {
+      height: 100%;
+      width: 300px;
+      margin-bottom: 16px;
+      margin-right: 16px;
+      background-color: rgba(255,255,255,10%);
+      border-radius: 4px;
+      transition: transform 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+  
+    .overview:hover {
+      transform: scale(1.05,1.05);
+    }
+  
+    .overview > h3 {
+      transition: text-shadow 0.2s ease-in-out;
+    }
+  
+    .overview:hover > h3 {
+      text-shadow: 0 0 3px white;
+    }
+  
+    .overview > span {
+      color: rgba(255,255,255,80%);
+    }
 
-  .overview {
-    height: 100%;
-    width: 300px;
-    margin-bottom: 16px;
-    margin-right: 16px;
-    background-color: rgba(255,255,255,10%);
-    border-radius: 4px;
-    transition: transform 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    box-sizing: border-box;
-  }
+    .social-media {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 200px;
+      width: 200px;
+      font-size: large;
+      display: flex;
+      padding-left: 40px;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .overview:hover {
-    transform: scale(1.05,1.05);
-  }
+    .social-media > i {
+      color: rgba(255,255,255,80%);
+      font-size: large;
+      /* margin-right: 32px; */
+      font-size: xx-large;
+    }
 
-  .overview > span {
-    color: rgba(255,255,255,80%);
+    .social-media > i:hover {
+      text-shadow: 0 0 3px white;
+    }
   }
   
   main {

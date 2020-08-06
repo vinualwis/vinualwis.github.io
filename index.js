@@ -210,23 +210,28 @@ const homeAnimation = () => {
       homeButton.classList.remove('invisible');
       homeButton.classList.add('slideup');
       setTimeout(() => {
-        const overviewTitle = document.querySelector('#home > .project-overview > h2');
-        overviewTitle.classList.remove('invisible');
-        overviewTitle.classList.add('slideup');
+        const socialMedia = document.querySelector('#home > .social-media');
+        socialMedia.classList.remove('invisible');
+        socialMedia.classList.add('slideup');
         setTimeout(() => {
-          const acOverview = document.querySelector('#acOverview');
-          acOverview.classList.remove('invisible');
-          acOverview.classList.add('slideup');
+          const overviewTitle = document.querySelector('#home > .project-overview > h2');
+          overviewTitle.classList.remove('invisible');
+          overviewTitle.classList.add('slideup');
           setTimeout(() => {
-            const hmOverview = document.querySelector('#hmOverview');
-            hmOverview.classList.remove('invisible');
-            hmOverview.classList.add('slideup');
+            const acOverview = document.querySelector('#acOverview');
+            acOverview.classList.remove('invisible');
+            acOverview.classList.add('slideup');
             setTimeout(() => {
-              const usOverview = document.querySelector('#usOverview');
-              usOverview.classList.remove('invisible');
-              usOverview.classList.add('slideup');
-            },200);
-          },200);
+              const hmOverview = document.querySelector('#hmOverview');
+              hmOverview.classList.remove('invisible');
+              hmOverview.classList.add('slideup');
+              setTimeout(() => {
+                const usOverview = document.querySelector('#usOverview');
+                usOverview.classList.remove('invisible');
+                usOverview.classList.add('slideup');
+              },100);
+            },100);
+          },100);
         },200);
       },200);
     },200);
