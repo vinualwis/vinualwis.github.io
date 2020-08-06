@@ -317,6 +317,13 @@ window.onload = () => {
 	generateProficiencies();
   generateProjects();
   createObserver();
+  // const hamburgerMenu = document.querySelector('.hamburger-menu');
+  // const appNav = document.querySelector('.app-nav-list');
+  // hamburgerMenu.onclick = () => {
+  //   appNav.classList.toggle('menu-visible');
+  //   console.log(appNav.classList);
+  //   console.log('🤪');
+  // }
 };
 
 window.onscroll = event => {
