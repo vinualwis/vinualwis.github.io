@@ -317,13 +317,20 @@ window.onload = () => {
 	generateProficiencies();
   generateProjects();
   createObserver();
-  // const hamburgerMenu = document.querySelector('.hamburger-menu');
-  // const appNav = document.querySelector('.app-nav-list');
-  // hamburgerMenu.onclick = () => {
-  //   appNav.classList.toggle('menu-visible');
-  //   console.log(appNav.classList);
-  //   console.log('🤪');
-  // }
+  const appNavigationLinks = document.querySelectorAll('.app-nav-list > li > a');
+  const appNavgiationCheckbox = document.querySelector('.app-nav > input');
+  appNavigationLinks.forEach((link) => {
+    link.onclick = () => {
+      // Ensures that only one navigation item can be active at any time
+      appNavigationLinks.forEach((link) => {
+        link.classList.remove('active');
+      });
+      link.classList.add('active');
+      // Close mobile navigation drawer
+      appNavgiationCheckbox.checked = false;
+    }
+  });
+
 };
 
 window.onscroll = event => {
@@ -340,7 +347,7 @@ window.onscroll = event => {
 	};
 	window.requestAnimationFrame(parallax);
 	// Ensures that the header remains fixed to the top of the page
-	const navBar = document.querySelector('header');
+  const navBar = document.querySelector('header');
 	const sticky = navBar.offsetTop;
 	if (window.pageYOffset >= sticky) {
 		navBar.classList.add('sticky');

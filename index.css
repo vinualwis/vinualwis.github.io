@@ -59,11 +59,6 @@ header {
   font-weight: bolder;
 }
 
-h1 > i {
-  color: white;
-  text-shadow: 0 0 4px #ffffff;
-}
-
 .app-nav > input {
   z-index: 2;
   opacity: 0;
@@ -104,18 +99,12 @@ h1 > i {
   background: white;
 }
 
-/*
- * But let's hide the middle one.
- */
 .app-nav input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 .app-nav input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
@@ -153,6 +142,21 @@ h1 > i {
   text-decoration: none;
   text-transform: uppercase;
   display: block;
+}
+
+.app-nav-list > li > a:active {
+  background-color: none;
+  user-select: none;
+}
+
+.active {
+  color: white;
+  text-shadow: 0 0 3px white;
+  background-color: none;
+}
+
+.app-nav-list > li > a:hover {
+  color: rgba(255,255,255,80%);
 }
 
 .app-logo {
@@ -448,18 +452,31 @@ span.checked {
   }
 }
 
-/* Large screen styling */
-@media (min-width: 1200px ){
-  
+@media (min-width: 1024px){
+  .app-nav > input, .app-nav > span {
+    display: none;
+  }
+
   .app-nav-list {
     display: flex;
-    list-style: none;
+    flex-direction: row;
+    transform: none;
+    height: 100%;
+    padding-top: 16px;
+    position: static;
+    background-color: rgba(255,255,255,0);
+    box-shadow: none;
+    width: 100%;
   }
   
   .app-nav-list li {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+/* Large screen styling */
+@media (min-width: 1200px ){
   
   
   main {
