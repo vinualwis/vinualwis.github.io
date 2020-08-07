@@ -285,11 +285,21 @@ h3 {
   align-items: center;
   box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
   min-height: 80px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.proficiency:hover {
+  background-color: rgba(255,255,255,8%);
+}
+
+.proficiency:hover > h3 {
+  text-shadow: 0 0 2px white;
 }
 
 .proficiency > h3 {
   font-size: medium;
   margin-bottom: 10px;
+  transition: text-shadow 0.1s ease-in-out;
 }
 
 .star-rating > span {
@@ -556,14 +566,14 @@ span.checked {
       align-items: center;
     }
 
-    .social-media > i {
+    .social-media > a > i {
       color: rgba(255,255,255,80%);
       font-size: large;
       /* margin-right: 32px; */
       font-size: xx-large;
     }
 
-    .social-media > i:hover {
+    .social-media > a > i:hover {
       text-shadow: 0 0 3px white;
     }
   }
@@ -647,4 +657,5 @@ span.checked {
   .tech-stack > span {
     font-size: small;
   }
+  
 }
