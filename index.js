@@ -97,7 +97,7 @@ const generateProficiencies = () => {
 const projects = [
   {
     id: 'facialrecognition',
-    title: 'Facial Verification Attendance Marking',
+    title: 'Attendance Concept',
     description: 'I was the mobile developer of a hackathon team that created an award-winning proof of concept within 36 hours that revolutionises the way attendance marking is done at university. The app significantly simplifies the attendance marking process for students, tutors and lecturers alike through using geo-fencing and facial recognition AI to mark attendance through a mobile app.',
     stack: ['Java','Firebase', 'Microsoft Azure Face AI'],
     award: '2018 Hackamon General Stream First Prize',
@@ -121,7 +121,7 @@ const projects = [
   },
   {
     id: 'ar',
-    title: 'Monash University Library AR Exhibition',
+    title: 'AR Exhibition',
     description: `I was the augmented-reality experience designer and developer for this project conducted
     for Monash University Sir Louis Matheson Library. The project used cutting-edge technology to 
     showcase geographic landmarks of significance as well as explain their rich history.`,
@@ -129,7 +129,7 @@ const projects = [
   },
   {
     id: 'connectionmanager',
-    title: 'Telstra IoT Connection Manager',
+    title: 'IoT Connection Manager',
     description: `I was a full-stack developer working predominantly on the backend APIs for this MVP project that simplifies and enhances connectivity 
     management for Telstra IoT machine-to-machine customers. In my role, I worked closely across layers to 
     deliver features that required the efficient transit of large amounts of data across the stack.
@@ -181,7 +181,7 @@ const generateProjects = () => {
         const projectContentElement = projectClone.querySelector('div.project-content');
         const projectTitleContainer = projectClone.querySelector('.project-title-container');
         const awardElement = generateAward(award);
-        projectContentElement.insertBefore(awardElement,projectTitleContainer);
+        projectTitleContainer.after(awardElement);
       }
       const projectDescriptionElement = projectClone.querySelector('.project-description');
       projectDescriptionElement.textContent = description;
@@ -374,7 +374,13 @@ window.onscroll = event => {
 	window.requestAnimationFrame(parallax);
 	// Ensures that the header remains fixed to the top of the page
   const navBar = document.querySelector('header');
-	const sticky = navBar.offsetTop;
+  const sticky = navBar.offsetTop;
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+    navBar.classList.add('backs');
+  }
+  else {
+    navBar.classList.remove('backs');
+  }
 	if (window.pageYOffset >= sticky) {
 		navBar.classList.add('sticky');
 	}
