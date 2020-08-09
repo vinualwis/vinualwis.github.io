@@ -342,6 +342,7 @@ span.checked {
   background-color: rgba(255,255,255,5%);
   box-sizing: border-box;
   box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
+  padding: 16px;
 }
 
 .project-content {
@@ -352,8 +353,7 @@ span.checked {
 }
 
 .project-content > h3 {
-  margin-bottom: 0;
-  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .project-content > p {
@@ -361,10 +361,8 @@ span.checked {
   margin: 0;
 }
 
-.project-content > h3, .project-content > p {
-  padding-top: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
+.project-content > i {
+  color: white;
 }
 
 .tech-stack {
@@ -372,10 +370,8 @@ span.checked {
   min-width: fit-content;
   width: 100%;
   min-height: 25px;
-  padding-left: 16px;
   box-sizing: border-box;
   align-items: center;
-  margin-bottom: 16px;
   margin-top: 8px;
 }
 
@@ -386,7 +382,7 @@ span.checked {
 .award {
   width: 100%;
   min-height: 25px;
-  background: #118bdc;
+  background: deepskyblue;
   display: flex;
   align-items: center;
   padding-left: 16px;
@@ -394,6 +390,18 @@ span.checked {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   font-size: x-small;
+  display: none;
+}
+
+.project-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.project-title-container > i {
+  color: white;
+  margin-right: 16px;
 }
 
 .award > i {
@@ -541,11 +549,11 @@ span.checked {
       transform: scale(1.05,1.05);
     }
   
-    .overview > h3 {
+    .overview i, .overview  h3{
       transition: text-shadow 0.2s ease-in-out;
     }
   
-    .overview:hover > h3 {
+    .overview:hover h3, .overview:hover i  {
       text-shadow: 0 0 3px white;
     }
   
@@ -644,10 +652,6 @@ span.checked {
   
   .projects-collection {
     grid-template-columns: repeat(3,1fr);
-  }
-  
-  .project-content > h3, .project-content > p {
-    padding: 8px;
   }
 
   .award > span {

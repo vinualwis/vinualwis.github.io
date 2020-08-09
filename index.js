@@ -179,8 +179,9 @@ const generateProjects = () => {
       projectTitleElement.textContent = title;
       if (award) {
         const projectContentElement = projectClone.querySelector('div.project-content');
+        const projectTitleContainer = projectClone.querySelector('.project-title-container');
         const awardElement = generateAward(award);
-        projectContentElement.insertBefore(awardElement,projectTitleElement);
+        projectContentElement.insertBefore(awardElement,projectTitleContainer);
       }
       const projectDescriptionElement = projectClone.querySelector('.project-description');
       projectDescriptionElement.textContent = description;
