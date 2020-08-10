@@ -1,3 +1,4 @@
+
 const proficiencies = [
   {
     language: 'Javascript',
@@ -178,7 +179,6 @@ const generateProjects = () => {
       const projectTitleElement= projectClone.querySelector('.project-title');
       projectTitleElement.textContent = title;
       if (award) {
-        const projectContentElement = projectClone.querySelector('div.project-content');
         const projectTitleContainer = projectClone.querySelector('.project-title-container');
         const awardElement = generateAward(award);
         projectTitleContainer.after(awardElement);
@@ -259,6 +259,12 @@ const skillsAnimation = () => {
 };
 
 const projectsAnimation = () => {
+  const appNavigationLinks = document.querySelectorAll('.app-nav-list > li > a');
+  appNavigationLinks.forEach((link) => {
+    link.classList.remove('active');
+  });
+  const projectsLink = document.querySelector('#projects-link');
+  projectsLink.classList.add('active');
 	const projectTitle = document.querySelector('#projects .description h2');
 	projectTitle.classList.add('slideup');
 	projectTitle.classList.remove('invisible');
@@ -331,8 +337,44 @@ const createObserver = () => {
   intersectionObserver.observe(homeSection);
 }
 
+const initialise = () => {
+  if(!localStorage.getItem('vappinit')){
+    localStorage.setItem('vappinit', true);
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
 window.onload = () => {
-	setTimeout(
+  const splashLogo = document.querySelector('.splash-screen img');
+  const splashScreen = document.querySelector('.splash-screen');
+  if (initialise()) {
+    setTimeout(() => {
+      splashLogo.classList.remove('invisible');
+    }, 250);
+    setTimeout(() => {
+      splashScreen.classList.add('invisible');
+      createObserver();
+      setTimeout(() => {
+        splashScreen.classList.add('splash-screen-remove');
+      },300);
+    }, 2000);
+    setTimeout(
+      () => {
+        const headerElement = document.querySelector('header');
+        headerElement.classList.remove('invisible');
+        headerElement.classList.add('slidein');
+      }
+      ,300
+    );
+  }
+  else {
+    splashScreen.classList.add('splash-screen-remove');
+    createObserver();
+  }
+  setTimeout(
 		() => {
 			const headerElement = document.querySelector('header');
 			headerElement.classList.remove('invisible');
@@ -342,7 +384,6 @@ window.onload = () => {
 	);
 	generateProficiencies();
   generateProjects();
-  createObserver();
   const appNavigationLinks = document.querySelectorAll('.app-nav-list > li > a');
   const appNavgiationCheckbox = document.querySelector('.app-nav > input');
   appNavigationLinks.forEach((link) => {
@@ -356,7 +397,6 @@ window.onload = () => {
       appNavgiationCheckbox.checked = false;
     }
   });
-
 };
 
 window.onscroll = event => {

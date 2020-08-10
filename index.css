@@ -22,6 +22,45 @@ main, header {
   max-width: 2000px;
 }
 
+.splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--main-background-color);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.splash-screen .content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-screen img {
+  height: 120px;
+  width: 100px;
+}
+
+.splash-screen img, .splash-screen h3 {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.splash-image-invisible {
+  opacity: 0;
+}
+
+.splash-screen-remove {
+  display: none;
+}
+
 /* || Header */
 
 header {
@@ -612,7 +651,6 @@ span.checked {
     padding-left: 86px;
     box-sizing: border-box;
     align-items: flex-start;
-    height: 100vh;
   }
   
   #home > h1 {
@@ -633,7 +671,7 @@ span.checked {
     flex-direction: row;
     padding: 80px 16px 36px 16px;
     position: absolute;
-    top: 1200px;
+    top: 1000px;
   }
 
   .proficiencies {
@@ -654,7 +692,7 @@ span.checked {
   /* Lg || Projects Section */
   #projects {
     position: absolute;
-    top: 2200px;
+    top: 2000px;
     padding: 70px 24px 36px 24px;
   }
   

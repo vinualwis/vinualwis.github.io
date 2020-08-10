@@ -13,10 +13,15 @@
     <script defer src="index.js"></script>
   </head>
   <body> 
+    <span class="splash-screen"> 
+      <div class="content-container"> 
+        <img src="./assets/AlwisLogo.svg" class="invisible">
+      </div>
+    </span>
     <header class="invisible">
       <div class="header-container"> 
         <div class="logo-container"> 
-          <img class="app-logo" alt="logo" src="./assets/AlwisLogo.png"/>
+          <img class="app-logo" alt="logo" src="./assets/AlwisLogo.svg"/>
           <h3 class="logo-text primary">VINU ALWIS</h3>
         </div>
         <nav class="app-nav"> 
@@ -26,13 +31,13 @@
           <span></span>
           <ul class="app-nav-list">
             <li>
-                <a href="#home" class="primary">Home</a>
+                <a href="#home" class="primary" id="home-link">Home</a>
             </li>
             <li>
-              <a href="#languages" class="primary">Skills</a>
+              <a href="#languages" class="primary" id="skills-link">Skills</a>
             </li>
             <li>
-              <a href="#projects" class="primary">Projects</a>
+              <a href="#projects" class="primary" id="projects-link">Projects</a>
             </li>
           </ul>
         </nav>
