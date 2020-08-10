@@ -37,13 +37,6 @@ main, header {
   transition: opacity 0.3s ease-in-out;
 }
 
-.splash-screen .content-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .splash-screen img {
   height: 120px;
   width: 100px;
