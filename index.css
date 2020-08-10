@@ -61,6 +61,24 @@ main, header {
   display: none;
 }
 
+.social-media {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.social-media > a > i {
+  color: rgba(255,255,255,80%);
+  font-size: large;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: xx-large;
+}
+
 /* || Header */
 
 header {
@@ -207,7 +225,7 @@ header {
 }
 
 .app-nav-list > li > a:hover {
-  color: rgba(255,255,255,80%);
+  text-shadow: 0 0 2px white;
 }
 
 .app-logo {
@@ -280,6 +298,11 @@ h3 {
   text-align: center;
 }
 
+#home > a:hover {
+  box-shadow: 0 0 3px white;
+  text-shadow: 0 0 2px white;
+}
+
 #home {
   flex-direction: column;
   padding-top: 96px;
@@ -302,10 +325,6 @@ h3 {
 }
 
 #home > .project-overview {
-  display: none;
-}
-
-.social-media {
   display: none;
 }
 
@@ -523,7 +542,7 @@ span.checked {
 /* Small screen landscape orientation specific styling */
 @media (orientation: landscape) and (max-width: 1000px) {
   #home {
-    padding-top: 0;
+    padding-top: 5%;
     justify-content: center;
   }
 
@@ -557,6 +576,13 @@ span.checked {
 
 /* Large screen styling */
 @media (min-width: 1200px ){
+  .social-media {
+    justify-content: flex-start;
+  }
+
+  .social-media > a > i:hover {
+    text-shadow: 0 0 3px white;
+  }
 
   @media(min-height: 800px){
     #home > .project-overview {
@@ -608,29 +634,6 @@ span.checked {
       color: rgba(255,255,255,80%);
     }
 
-    .social-media {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 200px;
-      width: 200px;
-      font-size: large;
-      display: flex;
-      padding-left: 40px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .social-media > a > i {
-      color: rgba(255,255,255,80%);
-      font-size: large;
-      /* margin-right: 32px; */
-      font-size: xx-large;
-    }
-
-    .social-media > a > i:hover {
-      text-shadow: 0 0 3px white;
-    }
   }
   
   main {
@@ -648,7 +651,6 @@ span.checked {
   #home {
     position: absolute;
     top: 0;
-    padding-left: 86px;
     box-sizing: border-box;
     align-items: flex-start;
   }
@@ -663,6 +665,10 @@ span.checked {
     width: 500px;
     text-align: start;
     font-size: large;
+  }
+
+  #home > h1, #home > p, #home > a {
+    margin-left: 86px;
   }
   
   /* Lg || Skills Section */
@@ -708,4 +714,9 @@ span.checked {
     font-size: small;
   }
   
+  @media (min-height: 1000px){
+    #home {
+      height: 1000px;
+    }
+  }
 }
