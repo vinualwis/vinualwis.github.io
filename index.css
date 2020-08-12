@@ -54,7 +54,7 @@ main, header {
   display: none;
 }
 
-.social-media {
+#home footer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -64,12 +64,22 @@ main, header {
   margin-bottom: 16px;
 }
 
+#home footer .project-overview {
+  display: none;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
 .social-media > a > i {
   color: rgba(255,255,255,80%);
   font-size: large;
+  font-size: xx-large;
   margin-left: 16px;
   margin-right: 16px;
-  font-size: xx-large;
 }
 
 /* || Header */
@@ -79,12 +89,13 @@ header {
   z-index: 1;
   height: 60px;
   width: 100%;
-  transition: background-color 0.3s ease-in-out, blur 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, blur 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .backs {
   background-color: rgba(0,34,68,90%);
   backdrop-filter: blur(4px);
+  box-shadow: rgba(12, 12, 13, 0.2) 0px 1px 8px 0px;
 }
 
 .sticky {
@@ -565,10 +576,19 @@ span.checked {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  #home {
+    min-height: 800px;
+    max-height: 1000px;
+  }
+
+  #home footer {
+    justify-content: space-between;
+  }
 }
 
 /* Large screen styling */
-@media (min-width: 1200px ){
+@media (min-width: 1200px ) {
   .social-media {
     justify-content: flex-start;
   }
@@ -577,17 +597,15 @@ span.checked {
     text-shadow: 0 0 3px white;
   }
 
-  @media(min-height: 800px){
-    #home > .project-overview {
+  @media(min-height: 800px) {
+    #home footer .project-overview {
       display: flex;
       height: 250px;
-      min-width: 50%;
-      padding-bottom: 16px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      padding-left: 16px;
+      justify-self: flex-end;
       box-sizing: border-box;
       flex-direction: column;
+      background-color: rgba(255, 255, 255, 0);
     }
   
     .overview-container {
@@ -630,10 +648,11 @@ span.checked {
   }
   
   main {
-    position: absolute;
-    top: 0;
     width: 100%;
-    height: 100%;
+    min-height: 2800px;
+    max-height: 3000px;
+    display: flex;
+    flex-direction: column;
   }
 
   .content-section {
@@ -642,8 +661,6 @@ span.checked {
   
   /* Lg || Home Section */
   #home {
-    position: absolute;
-    top: 0;
     box-sizing: border-box;
     align-items: flex-start;
   }
@@ -669,8 +686,6 @@ span.checked {
     display: flex;
     flex-direction: row;
     padding: 80px 16px 36px 16px;
-    position: absolute;
-    top: 1000px;
   }
 
   .proficiencies {
@@ -690,8 +705,6 @@ span.checked {
   
   /* Lg || Projects Section */
   #projects {
-    position: absolute;
-    top: 2000px;
     padding: 70px 24px 36px 24px;
   }
   
@@ -707,9 +720,4 @@ span.checked {
     font-size: small;
   }
   
-  @media (min-height: 1000px){
-    #home {
-      height: 1000px;
-    }
-  }
 }

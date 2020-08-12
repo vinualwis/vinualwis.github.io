@@ -211,11 +211,11 @@ const homeAnimation = () => {
       homeButton.classList.remove('invisible');
       homeButton.classList.add('slideup');
       setTimeout(() => {
-        const socialMedia = document.querySelector('#home > .social-media');
+        const socialMedia = document.querySelector('#home .social-media');
         socialMedia.classList.remove('invisible');
         socialMedia.classList.add('slideup');
         setTimeout(() => {
-          const overviewTitle = document.querySelector('#home > .project-overview > h2');
+          const overviewTitle = document.querySelector('#home .project-overview > h2');
           overviewTitle.classList.remove('invisible');
           overviewTitle.classList.add('slideup');
           setTimeout(() => {
