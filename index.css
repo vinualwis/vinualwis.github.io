@@ -719,5 +719,11 @@ span.checked {
   .tech-stack > span {
     font-size: small;
   }
+
+  @media (min-width: 2000px){
+    #home > h1 {
+      font-size: 102px;
+    }
+  }
   
 }
