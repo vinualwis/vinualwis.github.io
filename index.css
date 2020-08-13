@@ -666,7 +666,7 @@ span.checked {
   }
   
   #home > h1 {
-    font-size: 86px;
+    font-size: calc(5vw + 4px);
     text-transform: uppercase;
     margin-bottom: 16px;
   }
