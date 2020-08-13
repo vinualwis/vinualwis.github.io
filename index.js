@@ -108,7 +108,7 @@ const projects = [
     title: '"Hey Monash" Voice Assistant',
     description: 'I was a front-end developer of a hackathon team that created an award-winning proof of concept voice assistant for Monash University students. The web app significantly simplified common student interactions with the student portal through leveraging voice recognition AI.',
     stack: ['HTML','CSS', 'Javascript'],
-    award: '2016 Hackamon Connect Stream First Prize'
+    award: '2016 Hackamon Engage Stream First Prize'
   },
   { 
     id: 'unishuttle',
