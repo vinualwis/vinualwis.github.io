@@ -50,7 +50,7 @@ const proficiencies = [
   },
   {
     language: 'ReactJs',
-    proficiency: 3
+    proficiency: 4
   },
   {
     language: 'MongoDB',
